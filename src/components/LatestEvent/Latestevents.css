@@ -1,0 +1,28 @@
+.countdownbox{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(134, 32, 32);
+    border-radius: 20%;
+}
+
+.aligncenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customboxshadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.myheading{
+    border-left: 6px solid rgb(211, 40, 40);
+    padding-left: 15px;
+    font-size: 4rem;
+}
+
+.eventcard{
+    background-color: rgb(236, 236, 236);
+    border: 0px;
+    padding: 20px;
+}
