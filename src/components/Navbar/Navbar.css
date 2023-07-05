@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700&family=Carter+One&family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@500&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@300;400;500&family=Pacifico&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Shrikhand&family=Source+Sans+Pro:wght@300&family=Square+Peg&family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+/* ----------------------- header Style ---------------------------- */
+
+header {
+  height: 8rem;
+  padding: 0 4.8rem;
+  /* background: linear-gradient(135deg, #7B33FD, #8332FD, #b83ce4) !important; */
+  /* background: #1a2238; */
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  z-index: 999;
+}
+
+.scroll-header {
+  position: fixed !important;
+  top: -70px;
+  width: 100%;
+  z-index: 99;
+  transform: translateY(70px);
+  transition: transform 500ms ease;
+  -webkit-transition: transform 500ms ease;
+}
+
+.logo {
+  height: 6rem;
+  /* margin-bottom: 0.5rem; */
+  width: auto;
+}
+
+.nav-heading {
+  font-size: 3.5rem !important;
+  letter-spacing: 2px;
+  font-family: "Pacifico", cursive !important;
+  color: #fff !important;
+}
+
+/* ----------------------- Navbar Style ---------------------------- */
+
+.navbar {
+  position: unset;
+}
+
+/* ul */
+.navbar-lists {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin: 0;
+}
+
+/* li */
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* color: #212529; */
+  color: #fff;
+  transition: color 0.3s linear;
+  /* hover effect acha nzr aye jbhi  */
+}
+
+/* .navbar-link:hover,
+.navbar-link:active {
+    color: #8490ff !important;
+    color: #b83ce4 !important;
+}
+ */
+
+.mobile-nav--btn {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+/*specific cross x icon hide rhy but menu icon dekha isilya  */
+.mobile-nav--icon[name="close-outline"] {
+  display: none;
+}
+
+.close-outline {
+  display: none;
+}
+
+/* ----------------------- header & Navbar Responisve Style ---------------------------- */
+
+@media (max-width: 798px) {
+  .logo {
+    height: 6rem !important;
+  }
+
+  .mobile-nav--btn {
+    display: inline-block;
+    z-index: 999;
+    border: #212529;
+  }
+
+  .mobile-nav--btn .mobile-nav--icon {
+    font-size: 4.2rem;
+    color: #fff;
+  }
+
+  .active .mobile-nav--icon {
+    display: none;
+    font-size: 4.2rem;
+    position: absolute;
+    /*header my relative ki vi hy*/
+    top: 30%;
+    right: 10%;
+    color: #fff;
+    z-index: 9999;
+  }
+
+  .active .close-outline {
+    display: inline-block;
+  }
+
+  .navbar-lists {
+    width: 100vw;
+    height: 100vh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    /* transform-origin: top; */
+    transition: all 0.3s linear;
+  }
+
+  .active .navbar-lists {
+    background: #1a2238;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 999;
+    transform-origin: right;
+    transition: all 0.3s linear;
+  }
+
+  .navbar-link {
+    font-size: 4.2rem !important;
+  }
+}
+
+/* multipage web */
+.navbar-link {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.3px;
+  border-radius: 4px;
+  background-color: #fff;
+  bottom: -4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
