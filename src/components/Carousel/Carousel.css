@@ -130,3 +130,21 @@
   border-bottom: 40px solid #ffffff;
   border-right: 40px solid transparent;
 }
+
+@media (max-width: 798px) {
+  .main-carousel-img {
+    height: 85vh;
+  }
+
+  .carousel-h3 {
+    font-size: 2rem;
+  }
+  .carousel-strong {
+    font-size: 4.6rem;
+    margin: 6px 0px 8px 0px;
+  }
+
+  .carousel-p {
+    font-size: 12px;
+  }
+}
