@@ -1,17 +1,71 @@
-.main-carousel {
-  position: relative;
-  top: -80px;
-}
-
-.main-carousel img {
+.main-carousel-img {
   height: 60rem;
   width: 100%;
+}
+
+.carousel-div {
+  position: relative;
+}
+
+.inner-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 35%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.carousel-h3 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.carousel-strong {
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #f50136;
+}
+
+.carousel-p {
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.carousel-btn {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 12px 40px;
+  border-radius: 30px;
+  outline: 0 !important;
+  border: none;
+  cursor: pointer;
+  background-color: #f50136;
+}
+
+.carousel-btn:hover {
+  color: #f50136;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .cover_nav {
   position: relative;
   bottom: 0;
-  z-index: 999;
+  z-index: 99;
   text-align: center;
   padding: 0;
   margin: 0 auto;
@@ -34,7 +88,7 @@
 .cover_nav .cover_dots::before {
   content: " ";
   display: block;
-  z-index: 99999;
+  z-index: 99;
   position: absolute;
   left: -30px;
   bottom: 0;
@@ -57,6 +111,7 @@
   padding: 5px 0;
   font-weight: 500;
   color: #000000;
+  cursor: pointer;
 }
 .cover_nav .cover_dots li.active {
   border: solid 2px #f50136;
@@ -64,7 +119,7 @@
 .cover_nav .cover_dots:after {
   content: " ";
   display: block;
-  z-index: 99999;
+  z-index: 99;
   position: absolute;
   right: -30px;
   bottom: 0;
