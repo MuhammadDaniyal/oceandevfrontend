@@ -11,9 +11,7 @@ const Footer = () => {
       <div className={classes.footer}>
         <h2 className={classes.footerheading}>Ocean <span>Dev</span></h2>
         <p className={classes.footerpara}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,
+        Diving into the Future: Ocean Dev presents extraordinary AI events, unlocking the potential of artificial intelligence.
         </p>
         <div className={classes["footer-links"]}>
           <div>

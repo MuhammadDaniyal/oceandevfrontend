@@ -7,12 +7,12 @@ import AboutCard from "./AboutCard/AboutCard";
 const aboutCardData = [
     {
         heading: 'OUR MISSION',
-        para: 'Our mission is to create a platform where people can come together to learn, grow, and compete in coding competitions.We believe that by providing  a supportive and collaborative environment.',
+        para: 'Our mission at Ocean Dev is to lead the way in the ever-evolving field of artificial intelligence. We are passionate about harnessing the power of AI to transform industries, drive innovation, and create a positive impact on society.',
         img: './images/Mission.jpg',
     },
     {
         heading: 'OUR VISION',
-        para: 'Our vision is to become the go-to destination for coding enthusiasts around the world. We want to create a platform that is accessible to everyone, regardless of their skill level or background.',
+        para: 'Our vision at Ocean Dev is to be at the forefront of the AI revolution, driving advancements and shaping the future of intelligent technologies. We envision a world where AI is seamlessly integrated into various aspects of our lives. ',
         img: './images/Vision2.jpg',
     },
 ]
@@ -65,20 +65,19 @@ const About = () => {
                                 <div className="">
                                     <div className="about-page2-inner-div">
                                         <p className="about-page2-sm-heading">WHY&nbsp;CHOOSE&nbsp;US</p>
-                                        <h2 className="about-page2-main-heading">Unlock Your Potential With Our Innovative Software Solutions</h2>
+                                        <h2 className="about-page2-main-heading">Unlock Your Potential with Our Trailblazing AI Solutions</h2>
                                         <p className="about-page2-para">
-                                            We organizes a bunch of programming contests every month through the practice portal which includes a number of job-a-thons for freshers to get hiring opportunities in a significant number of companies.
+                                        We curate a series of monthly programming contests through our practice portal, specifically tailored to harness the power of artificial intelligence. These contests feature a range of job-a-thons, providing freshers with exceptional opportunities to secure positions in a wide array of cutting-edge AI companies. Our vision is to empower individuals to tap into their full potential, enabling them to thrive in the rapidly evolving landscape of AI and emerge as industry leaders.
                                         </p>
                                     </div>
                                     <div className="about-page2-content-div">
                                         <div className="about-page2-content-inner-div">
-                                            <h3 className="about-page2-content-inner-h3">Bi-Wizard Coding</h3>
-                                            <p className="about-page2-content-inner-p">A coding competition exclusively for students. The top 100 students get chances
-                                                of winning exciting rewards and also access to free courses.</p>
+                                            <h3 className="about-page2-content-inner-h3">AI Code Fusion</h3>
+                                            <p className="about-page2-content-inner-p">An extraordinary series of AI events catering to professionals, researchers, and enthusiasts. Experience the fusion of cutting-edge technology, inspiring talks, and immersive workshops, unlocking the limitless potential of artificial intelligence.</p>
                                         </div>
                                         <div className="about-page2-content-inner-div">
-                                            <h3 className="about-page2-content-inner-h3">Problem Of The Day</h3>
-                                            <p className="about-page2-content-inner-p"> A new problem every day to strengthen the base of data structure and algorithm.</p>
+                                            <h3 className="about-page2-content-inner-h3">AI Tech Summit</h3>
+                                            <p className="about-page2-content-inner-p"> Join industry leaders, visionaries, and innovators at our AI Tech Summit, where groundbreaking advancements, industry trends, and real-world applications of AI are explored. Gain valuable insights and forge connections with like-minded professionals.</p>
                                         </div>
                                         <div className="about-page2-content-inner-div">
                                             <h3 className="about-page2-content-inner-h3">24/7 Hours Support</h3>
