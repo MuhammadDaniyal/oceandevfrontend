@@ -23,8 +23,8 @@ const Latestevents = () => {
                         <div class="card eventcard">
                             <BsFillMicFill size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
-                                <h5 class="card-title latest-event-h5">Event 1</h5>
-                                <p class="card-text latest-event-p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title latest-event-h5">Fintech Summit</h5>
+                                <p class="card-text latest-event-p">Exploring the convergence of finance and technology, showcasing the latest innovations in the fintech industry.</p>
                                 <NavLink to="/" className="latest-event-link">Read More</NavLink>
                             </div>
                         </div>
@@ -33,8 +33,8 @@ const Latestevents = () => {
                         <div class="card eventcard">
                             <FcPositiveDynamic size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
-                                <h5 class="card-title latest-event-h5">Event 1</h5>
-                                <p class="card-text latest-event-p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title latest-event-h5">Design Thinking</h5>
+                                <p class="card-text latest-event-p">A hands-on workshop introducing design thinking principles and methodologies for problem-solving and innovation.</p>
                                 <NavLink to="/" className="latest-event-link">Read More</NavLink>
                             </div>
                         </div>
@@ -43,8 +43,8 @@ const Latestevents = () => {
                         <div class="card eventcard">
                             <FcBiohazard size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
-                                <h5 class="card-title latest-event-h5">Event 1</h5>
-                                <p class="card-text latest-event-p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title latest-event-h5">Future of Health</h5>
+                                <p class="card-text latest-event-p">Addressing pressing environmental challenges, sustainable practices, and strategies for a greener future.</p>
                                 <NavLink to="/" className="latest-event-link">Read More</NavLink>
                             </div>
                         </div>
@@ -53,8 +53,8 @@ const Latestevents = () => {
                         <div class="card eventcard">
                             <FcAutomotive size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
-                                <h5 class="card-title latest-event-h5">Event 1</h5>
-                                <p class="card-text latest-event-p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title latest-event-h5">NFT Summit</h5>
+                                <p class="card-text latest-event-p">A comprehensive summit delving into the potential of blockchain technology across various industries i.e, supply chain management.</p>
                                 <NavLink to="/" className="latest-event-link">Read More</NavLink>
                             </div>
                         </div>
