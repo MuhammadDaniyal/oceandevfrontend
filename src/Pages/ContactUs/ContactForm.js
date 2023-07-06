@@ -2,6 +2,7 @@ import classes from "./ContactForm.module.css";
 import useInput from "../../utils/Hooks/useInput";
 import useLoader from "../../utils/Hooks/useLoader";
 import { Grid, TextField, Button } from "@mui/material";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const { loader, handleLoader, LoadingComponent } = useLoader();
@@ -63,7 +64,7 @@ const ContactForm = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
     if (!formIsValid) {
-      // toast.error("Please fill all the fields");
+      toast.error("Please fill all the fields");
       return;
     }
     const data = {
@@ -84,12 +85,12 @@ const ContactForm = () => {
       });
       if (!response.ok) {
         handleLoader(false);
-        //toast.error("Something went wrong!");
+        toast.error("Something went wrong!");
         throw new Error("Something went wrong!");
       }
       const responseData = await response.json();
       handleLoader(false);
-      //toast.success("Message sent successfully!");
+      toast.success("Message sent successfully!");
       resetFirstNameInput();
       resetLastNameInput();
       resetEmailInput();
@@ -97,12 +98,13 @@ const ContactForm = () => {
       resetMessageInput();
     } catch (err) {
       handleLoader(false);
-      //toast.error(err.message);
+      toast.error(err.message);
     }
   };
 
   return (
     <form>
+      <h1 className={classes.formHeading}>Join us Form</h1>
       <div className={classes.formControl}>
         {loader && LoadingComponent}
         <Grid container spacing={2}>
@@ -135,9 +137,7 @@ const ContactForm = () => {
               variant="outlined"
               size="small"
               helperText={
-                lastNameIsError
-                  ? "Incorrect Last Name."
-                  : "atleast 5 characters"
+                lastNameIsError ? "Incorrect Last Name." : "should not be empty"
               }
               fullWidth
             />
@@ -154,7 +154,7 @@ const ContactForm = () => {
               size="small"
               type="email"
               helperText={
-                emailIsError ? "Incorrect Email" : "atleast 5 characters"
+                emailIsError ? "Incorrect Email" : "Enter a valid email"
               }
               fullWidth
             />
@@ -171,7 +171,7 @@ const ContactForm = () => {
               size="small"
               type="number"
               helperText={
-                phoneIsError ? "Incorrect phone" : "atleast 5 characters"
+                phoneIsError ? "Incorrect phone" : "should not be empty"
               }
               fullWidth
             />
@@ -187,7 +187,7 @@ const ContactForm = () => {
               variant="outlined"
               size="small"
               helperText={
-                messageIsError ? "Incorrect Message." : "atleast 5 characters"
+                messageIsError ? "Incorrect Message." : "should not be empty"
               }
               fullWidth
               multiline
