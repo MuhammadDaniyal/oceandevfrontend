@@ -2,43 +2,43 @@ import React, { useEffect, useState } from 'react'
 import Layout from "../../Layout"
 import '../Event/Event.css'
 import Eventcards from './Eventcards';
-import EventHeader from  '../../components/EventHeader/EventHeader'
+import EventHeader from '../../components/EventHeader/EventHeader'
 import '../../components/EventToggleComponent/EventComponent.css'
 
 const Event = () => {
 
-    const [events,setevents] = useState([]);
+    const [events, setevents] = useState([]);
+    const [filterevent, setFilterevent] = useState([])
 
-    const getuser = async ()=>{
+    const getuser = async () => {
 
-        try{
-          const url = `http://localhost:8080/event/list`
-    
-          const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          });
-          const json = await response.json();
-          setevents(json.events)
-            console.log(json)
+        try {
+            const url = `http://localhost:8080/event/list`
+
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const json = await response.json();
+            setevents(json.events)
         }
-        catch(error){
-          console.log(error)
+        catch (error) {
+            console.log(error)
         }
-      }
+    }
 
-    useEffect(()=>{
+    useEffect(() => {
         getuser();
-    })
+    }, [])
 
     const filterEvents = (myEvent) => {
         const updatedEvents = events.filter((elem) => {
             return elem.status === myEvent;
 
         });
-        setevents(updatedEvents);
+        setFilterevent(updatedEvents);
     }
 
 
@@ -56,11 +56,20 @@ const Event = () => {
                     </div>
                 </div>
             </div>
-            <div className='container' style={{ height: "100vh", marginTop:"9rem" }}>
-                <div className="row">
-                {events.map((item,index)=>{
-                    return <Eventcards item={item} key={index}/>
-                })}
+            <div className='container' style={{ padding: '5rem 0rem' }}>
+                <div className="row event-page-row mx-auto">
+                    {
+                        filterevent.length !== 0 ? (
+
+                            filterevent.map((item, index) => {
+                                return <Eventcards item={item} key={index} />
+                            })
+                        ) : (
+                            events.map((item, index) => {
+                                return <Eventcards item={item} key={index} />
+                            })
+                        )
+                    }
                 </div>
             </div>
         </Layout>

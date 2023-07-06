@@ -7,11 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* background: linear-gradient(135deg, #b83ce4, #b83ce4, #7B33FD) !important; */
-  /* background-color: #1a2238; */
-  background-color: #341950;
-  /* background-color: #f50136; */
-  /* width: 100%; */
+  background-color: #0b031b;
   height: 100%;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
