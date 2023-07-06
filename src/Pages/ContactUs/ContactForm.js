@@ -203,6 +203,7 @@ const ContactForm = () => {
           type="submit"
           variant="contained"
           className={classes.primaryBtn}
+          onClick={submitHandler}
         >
           Send Message
         </Button>
