@@ -1,0 +1,88 @@
+.countdownbox {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(134, 32, 32);
+  border-radius: 20%;
+}
+
+.aligncenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customboxshadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.count-down-row {
+  padding: 3rem 0rem 3rem 3rem;
+}
+
+.myheading {
+  border-left: 6px solid rgb(211, 40, 40);
+  padding-left: 15px;
+  font-size: 4rem;
+}
+
+.eventcard {
+  width: 25rem;
+  background-color: rgb(236, 236, 236);
+  border: 0px;
+  padding: 24px 15px 16px 15px;
+  display: flex;
+  gap: 5px;
+}
+
+.eventcard:hover {
+  background-color: #f50136;
+  color: #fff !important;
+}
+
+.eventcard:hover h5 {
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+.eventcard:hover p {
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.eventcard:hover .latest-event-link {
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.latest-event-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.latest-event-h5 {
+  color: #18181c;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.latest-event-p {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  /* margin: 0 0 15px; */
+  line-height: 24px;
+  font-weight: 400;
+  color: #838383;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.latest-event-link {
+  color: #f50136;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
