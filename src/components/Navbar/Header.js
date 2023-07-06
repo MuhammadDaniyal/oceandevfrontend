@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import Navbar from './Navbar.js'
 import './Navbar.css'
 
 const Header = () => {
+
+    const currentLoc = useLocation()
+    console.log(currentLoc);
 
     const [isVisible, setVisible] = useState(false);
 
@@ -24,7 +27,11 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={`${isVisible ? 'default-header  scroll-header' : 'default-header '}`}>
+        <header className={
+            `
+            ${currentLoc.pathname === '/' ? '' : 'other-nav'}
+            ${isVisible ? 'default-header  scroll-header' : 'default-header '}
+            `}>
             <NavLink to={'/'}>
                 <h2 className='nav-heading'>Ocean Dev</h2>
             </NavLink>
