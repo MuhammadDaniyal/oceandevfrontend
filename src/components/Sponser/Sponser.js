@@ -29,10 +29,8 @@ const Sponser = () => {
     };
     return (
         <>
-
-
-            <section className="container-fluid section-sponser my-5">
-                <div className='container'>
+            <section className="container-fluid section-sponser mt-5">
+                <div className='container mt-4'>
                     <h1 className='myheading fw-bold'>Our Sponsers</h1>
                 </div>
                 <Slider className="customer-logos slider" {...settings}>

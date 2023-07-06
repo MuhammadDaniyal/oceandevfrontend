@@ -29,14 +29,13 @@
 .contactDiv {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2%;
-  border-radius: 7px;
   background-color: white;
-  padding: 0.5rem;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 3rem 0rem 5rem 0rem;
 }
 .leftDiv {
-  width: 36%;
+  width: 33%;
 }
 
 .rightDiv {

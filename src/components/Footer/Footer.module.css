@@ -1,0 +1,138 @@
+.footer {
+  display: flex;
+  /* margin-top: 1rem; */
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  color: white;
+  font-family: "Nunito";
+  background: #0b031b;
+  width: 100%;
+  text-align: center;
+  padding: 3.6rem 0rem 3rem 0px;
+  gap: 6px;
+}
+
+.footerheading {
+  font-size: 3.5rem !important;
+  letter-spacing: 2px;
+  font-family: "Pacifico", cursive !important;
+  color: #fff !important;
+  margin-bottom: 12px;
+}
+
+.footerheading span {
+  font-size: 3.5rem !important;
+  letter-spacing: 2px;
+  font-family: "Pacifico", cursive !important;
+  color: #f50136 !important;
+}
+.footerpara {
+  font-size: 15px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.footer-links span {
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.footer-links span:hover {
+  color: #f50136;
+}
+
+.footer-links span:not(:first-child)::before {
+  margin: 0 10px;
+  content: "|";
+}
+
+.stick::before {
+  margin: 0 10px;
+  content: "|";
+}
+
+.contact {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+.contact span {
+  display: flex;
+}
+
+.social-handles {
+  margin: 1rem 0;
+}
+.social-handles svg {
+  margin: 6px 10px 0 10px;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+.social-handles svg:hover {
+  color: #f50136;
+}
+
+.copyright {
+  overflow: auto;
+  font-family: "Nunito";
+  text-align: center;
+  color: #0f2d25;
+  background-color: #f50136;
+  padding: 0 1rem;
+}
+
+.copyright p {
+  margin: 0px !important;
+  padding: 8px 0px;
+  font-size: 13px;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 0 2rem;
+  }
+
+  .masked-logo {
+    display: none;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-links > div {
+    margin-top: 1rem;
+  }
+
+  .stick::before {
+    content: "";
+    margin: 0;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .contact span {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 798px) {
+  .footer {
+    padding: 3.6rem 0rem 3rem 0px;
+  }
+}

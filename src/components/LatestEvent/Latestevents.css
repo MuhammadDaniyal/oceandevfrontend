@@ -1,7 +1,7 @@
 .countdownbox {
   width: 100px;
   height: 100px;
-  background-color: rgb(134, 32, 32);
+  background-color: #f50136;
   border-radius: 20%;
 }
 
@@ -21,7 +21,7 @@
 
 .count-down-col {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .myheading {

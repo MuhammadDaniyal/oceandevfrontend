@@ -12,6 +12,7 @@
   --color-btn-primary-hover: #222d49;
   --color-btn-secondary: #f50136;
   --color-btn-secondary-hover: #f83861;
+  --color-btn-secondary-disabled: #990122;
 }
 
 html {

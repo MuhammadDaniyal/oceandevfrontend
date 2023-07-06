@@ -7,11 +7,9 @@
 
 .section-sponser {
   height: 60vh;
-
   display: flex;
-  gap: 2rem;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
