@@ -1,0 +1,26 @@
+.containerDiv {
+  margin-top: 8rem;
+}
+.contactDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftDiv {
+  width: 30%;
+}
+
+.rightDiv {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  /* Adjust the max-width value to match your desired breakpoint for smaller views */
+  .leftDiv {
+    width: 100%;
+  }
+
+  .rightDiv {
+    width: 100%;
+  }
+}
