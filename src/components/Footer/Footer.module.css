@@ -1,48 +1,52 @@
 .footer {
   display: flex;
-  margin-top: 4rem;
+  /* margin-top: 1rem; */
   flex-direction: column;
   position: relative;
   align-items: center;
   color: white;
   font-family: "Nunito";
-  background: linear-gradient(
-    90deg,
-    rgba(15, 45, 37, 1) 0%,
-    rgba(23, 78, 73, 1) 100%
-  );
+  background: #0b031b;
   width: 100%;
   text-align: center;
-  padding: 0 4rem;
+  padding: 3.6rem 0rem 3rem 0px;
+  gap: 6px;
 }
 
-.masked-logo {
-  /* position: relative; */
-  /* width: 100%; */
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  max-width: 24%;
-  opacity: 0.3;
-  height: 100%;
-  /* transform: rotateY(180deg); */
+.footerheading {
+  font-size: 3.5rem !important;
+  letter-spacing: 2px;
+  font-family: "Pacifico", cursive !important;
+  color: #fff !important;
+  margin-bottom: 12px;
 }
 
-.masked-logo img {
-  width: 100%;
-  height: 100%;
+.footerheading span {
+  font-size: 3.5rem !important;
+  letter-spacing: 2px;
+  font-family: "Pacifico", cursive !important;
+  color: #f50136 !important;
+}
+.footerpara {
+  font-size: 15px;
 }
 
 .footer-links {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .footer-links span {
   cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.footer-links span:hover {
+  color: #f50136;
 }
 
 .footer-links span:not(:first-child)::before {
@@ -58,6 +62,7 @@
 .contact {
   display: flex;
   margin-top: 1rem;
+  font-size: 15px;
 }
 
 .contact span {
@@ -68,7 +73,12 @@
   margin: 1rem 0;
 }
 .social-handles svg {
-  margin: 0 5px;
+  margin: 6px 10px 0 10px;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+.social-handles svg:hover {
+  color: #f50136;
 }
 
 .copyright {
@@ -76,8 +86,15 @@
   font-family: "Nunito";
   text-align: center;
   color: #0f2d25;
-  background-color: #c0a147;
+  background-color: #f50136;
   padding: 0 1rem;
+}
+
+.copyright p {
+  margin: 0px !important;
+  padding: 8px 0px;
+  font-size: 13px;
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -114,8 +131,8 @@
   }
 }
 
-@media screen and (max-width: 321px) {
+@media (max-width: 798px) {
   .footer {
-    padding: 0 1rem;
+    padding: 3.6rem 0rem 3rem 0px;
   }
 }
