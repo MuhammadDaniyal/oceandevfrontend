@@ -1,26 +1,59 @@
 .containerDiv {
-  margin-top: 8rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.mainDiv {
+  /* display: flex;
+  flex-wrap: wrap; */
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f9f9fb;
+  padding: 2rem;
+  padding-bottom: 5rem;
+}
+.headingDiv {
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+.headingDiv > h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000;
+}
+.headingDiv > p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
 }
 .contactDiv {
   display: flex;
   flex-wrap: wrap;
+  gap: 2%;
+  border-radius: 7px;
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
-
 .leftDiv {
-  width: 30%;
+  width: 36%;
 }
 
 .rightDiv {
-  width: 70%;
+  width: 62%;
 }
 
 @media (max-width: 768px) {
   /* Adjust the max-width value to match your desired breakpoint for smaller views */
   .leftDiv {
+    margin-top: 4rem;
     width: 100%;
+    margin-top: 0;
   }
 
   .rightDiv {
+    margin-top: 4rem;
     width: 100%;
+    margin: 4rem 2rem 0 2rem;
   }
 }

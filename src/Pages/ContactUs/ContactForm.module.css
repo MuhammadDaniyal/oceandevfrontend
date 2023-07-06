@@ -1,0 +1,23 @@
+.formControl {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+}
+.btnDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+  margin: 2rem 2rem 2rem 0;
+}
+.primaryBtn {
+  background-color: var(--color-btn-primary) !important;
+  color: white;
+}
+.primaryBtn:hover {
+  background-color: var(--color-btn-primary-hover) !important;
+  color: white;
+}

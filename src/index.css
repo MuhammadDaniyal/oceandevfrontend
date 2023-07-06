@@ -5,6 +5,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif !important;
+
+  --color-primary: #1a2238;
+  --color-secondary: #f9f9fb;
+  --color-btn-primary: #1a2238;
+  --color-btn-primary-hover: #222d49;
+  --color-btn-secondary: #f50136;
+  --color-btn-secondary-hover: #f83861;
 }
 
 html {

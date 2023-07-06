@@ -27,7 +27,7 @@ const ContactInfo = () => {
         </div>
         <div className={classes.contactInfoItem}>
           <IoLocationSharp />
-          <p>ABC Road, Common gali, Karachi.</p>
+          <p>ABC Road, Common gali, Karachi</p>
         </div>
       </div>
       <div className={classes.socialDiv}>
