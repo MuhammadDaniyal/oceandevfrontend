@@ -1,33 +1,66 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from "../../Layout"
-import { NavLink } from 'react-router-dom';
 import '../Event/Event.css'
+import Eventcards from './Eventcards';
+import EventHeader from  '../../components/EventHeader/EventHeader'
+import '../../components/EventToggleComponent/EventComponent.css'
 
 const Event = () => {
+
+    const [events,setevents] = useState([]);
+
+    const getuser = async ()=>{
+
+        try{
+          const url = `http://localhost:8080/event/list`
+    
+          const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+          const json = await response.json();
+          setevents(json.events)
+            console.log(json)
+        }
+        catch(error){
+          console.log(error)
+        }
+      }
+
+    useEffect(()=>{
+        getuser();
+    })
+
+    const filterEvents = (myEvent) => {
+        const updatedEvents = events.filter((elem) => {
+            return elem.status === myEvent;
+
+        });
+        setevents(updatedEvents);
+    }
+
+
     return (
         <Layout>
-            <div className='container' style={{ height: "100vh", marginTop:"9rem" }}>
-                <div className="row">
-                    <div className="col">
-                        <div class="card eventcard1">
-                            <div className='imgcontainer'>
-                                <img className='img-fluid' src="https://c4.wallpaperflare.com/wallpaper/945/487/732/ai-art-astronaut-spacesuit-space-science-fiction-hd-wallpaper-preview.jpg" alt="" />
-                                <span class="badge text-bg-success px-4 py-2 badgestyle">Ongoing</span>
-                            </div>
-                            <div class="card-body">
-                                <div className="row">
-                                    <div className="col-4 borderstyle" >
-                                        <h5 class="datestyle text-center"><h5>Sept</h5>04</h5>    
-                                    </div>
-                                    <div className="col-8 d-flex justify-content-center align-items-center borderstyle1">
-                                        <h5 class="card-title titlestyle text-start">Autonomous Vehicle Seminar</h5>    
-                                    </div>
-                                </div>
-                                <p class="card-text description">Revolutionizing transportation: Autonomous vehicles take the wheel, paving the way for a new era of mobility.</p>
-                                {/* <NavLink to="/" className="latest-event-link">Read More</NavLink> */}
-                            </div>
+            <EventHeader />
+            <div className='container'>
+                <div className='row d-flex justify-content-center'>
+                    <div className='col-10 col-lg-4 col-md-4'>
+                        <div className='event-nav'>
+                            <h2 onClick={() => filterEvents("Past")} className='event-nav-h2'>Previous</h2>
+                            <h2 onClick={() => filterEvents("Ongoing")} className='event-nav-h2'>Ongoing</h2>
+                            <h2 onClick={() => filterEvents("Upcoming")} className='event-nav-h2'>Upcoming</h2>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className='container' style={{ height: "100vh", marginTop:"9rem" }}>
+                <div className="row">
+                {events.map((item,index)=>{
+                    return <Eventcards item={item} key={index}/>
+                })}
                 </div>
             </div>
         </Layout>
