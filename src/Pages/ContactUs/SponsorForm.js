@@ -1,10 +1,10 @@
-import classes from "./SponserForm.module.css";
+import classes from "./SponsorForm.module.css";
 import useInput from "../../utils/Hooks/useInput";
 import useLoader from "../../utils/Hooks/useLoader";
-import { Grid, TextField, Button } from "@mui/material";
+import { Grid, TextField, Button, MenuItem } from "@mui/material";
 import { toast } from "react-toastify";
 
-const SponserForm = () => {
+const SponsorForm = () => {
   const { loader, handleLoader, LoadingComponent } = useLoader();
   const {
     value: companyNameValue,
@@ -34,12 +34,12 @@ const SponserForm = () => {
     return regix.test(value);
   });
   const {
-    value: sponsershipLevelValue,
-    isValid: sponsershipLevelIsValid,
-    isError: sponsershipLevelIsError,
-    inputKeyStrockHandler: sponsershipLevelInputKeyStrockHandler,
-    inputBlurHandler: sponsershipLevelInputBlurHandler,
-    reset: resetSponsershipLevelInput,
+    value: sponsorshipLevelValue,
+    isValid: sponsorshipLevelIsValid,
+    isError: sponsorshipLevelIsError,
+    inputKeyStrockHandler: sponsorshipLevelInputKeyStrockHandler,
+    inputBlurHandler: sponsorshipLevelInputBlurHandler,
+    reset: resetSponsorshipLevelInput,
   } = useInput("", (value) => value.trim() !== "");
   const {
     value: messageValue,
@@ -55,7 +55,7 @@ const SponserForm = () => {
     companyNameIsValid &&
     contactPersonIsValid &&
     EmailIsValid &&
-    sponsershipLevelIsValid &&
+    sponsorshipLevelIsValid &&
     MessageIsValid
   ) {
     formIsValid = true;
@@ -71,18 +71,21 @@ const SponserForm = () => {
       companyName: companyNameValue,
       contactPerson: contactPersonValue,
       email: emailValue,
-      sponsershipLevel: sponsershipLevelValue,
+      sponsorshipLevel: sponsorshipLevelValue,
       message: messageValue,
     };
     try {
       handleLoader(true);
-      const response = await fetch("abc.com", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "http://localhost:8080/sponsorForm/add-new",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!response.ok) {
         handleLoader(false);
         toast.error("Something went wrong!");
@@ -94,7 +97,7 @@ const SponserForm = () => {
       resetCompanyNameInput();
       resetContactPersonInput();
       resetEmailInput();
-      resetSponsershipLevelInput();
+      resetSponsorshipLevelInput();
       resetMessageInput();
     } catch (err) {
       handleLoader(false);
@@ -104,7 +107,7 @@ const SponserForm = () => {
 
   return (
     <form>
-      <h1 className={classes.formHeading}>Sponser Form</h1>
+      <h1 className={classes.formHeading}>Sponsor Form</h1>
       <div className={classes.formControl}>
         {loader && LoadingComponent}
         <Grid container spacing={2}>
@@ -163,22 +166,30 @@ const SponserForm = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
-              value={sponsershipLevelValue}
-              onChange={sponsershipLevelInputKeyStrockHandler}
-              onBlur={sponsershipLevelInputBlurHandler}
-              error={sponsershipLevelIsError}
+              value={sponsorshipLevelValue}
+              onChange={sponsorshipLevelInputKeyStrockHandler}
+              onBlur={sponsorshipLevelInputBlurHandler}
+              error={sponsorshipLevelIsError}
               id="standard-error-helper-text"
-              label="Phone"
+              label="Sponsorship Level"
               variant="outlined"
               size="small"
               type="number"
               helperText={
-                sponsershipLevelIsError
-                  ? "Incorrect Sponsership Level"
+                sponsorshipLevelIsError
+                  ? "Incorrect Sponsorship Level"
                   : "should not be empty"
               }
               fullWidth
-            />
+              select
+            >
+              <MenuItem value="platinum">Platinum Sponsor</MenuItem>
+              <MenuItem value="gold">Gold Sponsor</MenuItem>
+              <MenuItem value="silver">Silver Sponsor</MenuItem>
+              <MenuItem value="bronze">Bronze Sponsor</MenuItem>
+              <MenuItem value="supporting">Supporting Sponsor</MenuItem>
+              <MenuItem value="inkind">In-Kind Sponsor</MenuItem>
+            </TextField>
           </Grid>
           <Grid item xs={12}>
             <TextField
@@ -213,4 +224,4 @@ const SponserForm = () => {
     </form>
   );
 };
-export default SponserForm;
+export default SponsorForm;

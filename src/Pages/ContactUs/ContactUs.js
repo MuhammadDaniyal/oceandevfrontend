@@ -5,7 +5,7 @@ import ContactInfo from "./ContactInfo";
 import ContactForm from "./ContactForm";
 
 import { useState } from "react";
-import SponserForm from "./SponserForm";
+import SponsorForm from "./SponsorForm";
 
 const ContactUs = () => {
   const [isJoinUsFormEnabled, setIsJoinUsFormEnabled] = useState(true);
@@ -40,7 +40,7 @@ const ContactUs = () => {
             </div>
             <div className={classes.rightDiv}>
               {isJoinUsFormEnabled && <ContactForm />}
-              {isSponserFormEnabled && <SponserForm />}
+              {isSponserFormEnabled && <SponsorForm />}
             </div>
           </div>
         </div>
