@@ -3,7 +3,6 @@ import classes from "./ContactInfo.module.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
-// import { FaLocationDot } from "react-icons/fa";
 import {
   BiLogoFacebook,
   BiLogoInstagram,
@@ -11,7 +10,16 @@ import {
   BiLogoLinkedin,
 } from "react-icons/bi";
 
-const ContactInfo = () => {
+import { Button } from "@mui/material";
+
+const ContactInfo = (props) => {
+  const {
+    isJoinUsFormEnabled,
+    isSponserFormEnabled,
+    handleJoinUsFormClick,
+    handleSponserFormClick,
+  } = props;
+
   return (
     <div className={classes.container}>
       <h1>Contact Information</h1>
@@ -29,6 +37,24 @@ const ContactInfo = () => {
           <IoLocationSharp />
           <p>ABC Road, Common gali, Karachi</p>
         </div>
+      </div>
+      <div className={classes.btnDiv}>
+        <Button
+          type="button"
+          variant="contained"
+          disabled={isJoinUsFormEnabled}
+          onClick={handleJoinUsFormClick}
+        >
+          Join Us
+        </Button>
+        <Button
+          type="button"
+          variant="contained"
+          disabled={isSponserFormEnabled}
+          onClick={handleSponserFormClick}
+        >
+          Become a Sponser
+        </Button>
       </div>
       <div className={classes.socialDiv}>
         <BiLogoFacebook />

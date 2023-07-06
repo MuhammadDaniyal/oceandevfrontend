@@ -4,7 +4,23 @@ import classes from "./ContactUs.module.css";
 import ContactInfo from "./ContactInfo";
 import ContactForm from "./ContactForm";
 
+import { useState } from "react";
+// import SponserForm from "./SponserForm";
+
 const ContactUs = () => {
+  const [isJoinUsFormEnabled, setIsJoinUsFormEnabled] = useState(true);
+  const [isSponserFormEnabled, setIsSponserFormEnabled] = useState(false);
+
+  const handleJoinUsFormClick = () => {
+    setIsJoinUsFormEnabled(true);
+    setIsSponserFormEnabled(false);
+  };
+
+  const handleSponserFormClick = () => {
+    setIsJoinUsFormEnabled(false);
+    setIsSponserFormEnabled(true);
+  };
+
   return (
     <Layout>
       <div className={classes.containerDiv}>
@@ -15,10 +31,16 @@ const ContactUs = () => {
           </div>
           <div className={classes.contactDiv}>
             <div className={classes.leftDiv}>
-              <ContactInfo />
+              <ContactInfo
+                isJoinUsFormEnabled={isJoinUsFormEnabled}
+                isSponserFormEnabled={isSponserFormEnabled}
+                handleJoinUsFormClick={handleJoinUsFormClick}
+                handleSponserFormClick={handleSponserFormClick}
+              />
             </div>
             <div className={classes.rightDiv}>
-              <ContactForm />
+              {isJoinUsFormEnabled && <ContactForm />}
+              {/* {isSponserFormEnabled && <SponserForm />} */}
             </div>
           </div>
         </div>
