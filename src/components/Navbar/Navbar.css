@@ -20,12 +20,12 @@
 }
 
 .other-nav {
-  background: #1a2238 !important;
+  background: #19102e !important;
 }
 
 .scroll-header {
   position: fixed !important;
-  background: #1a2238 !important;
+  background: #19102e !important;
   top: -70px;
   width: 100%;
   z-index: 999;
@@ -45,6 +45,12 @@
   letter-spacing: 2px;
   font-family: "Pacifico", cursive !important;
   color: #fff !important;
+}
+.nav-heading span {
+  font-size: 3.5rem !important;
+  letter-spacing: 2px;
+  font-family: "Pacifico", cursive !important;
+  color: #f50136 !important;
 }
 
 /* ----------------------- Navbar Style ---------------------------- */
@@ -152,7 +158,7 @@
   }
 
   .active .navbar-lists {
-    background: #1a2238;
+    background: #19102e;
     visibility: visible;
     opacity: 1;
     transform: translateX(0);

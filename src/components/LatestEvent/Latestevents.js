@@ -9,17 +9,17 @@ const Latestevents = () => {
     return (
         <>
             <div className='container aligncenter flex-column'>
-                <div className="row w-100">
+                <div className="row row-upper w-100">
                     <div className="col">
                         <h1 className='myheading fw-bold'>Latest Events</h1>
-                        <p className='fs-4 my-4'>Explore the cutting-edge world of RCai with the latest updates on groundbreaking advancements, innovative applications, and transformative breakthroughs. Discover the future of artificial intelligence and robotics on our website.</p>
+                        <p className='fs-4 my-4' style={{ textAlign: "justify" }}>Explore the cutting-edge world of RCai with the latest updates on groundbreaking advancements, innovative applications, and transformative breakthroughs. Discover the future of artificial intelligence and robotics on our website.</p>
                     </div>
                     <div className="col">
                         <Countdownbox />
                     </div>
                 </div>
-                <div className="row my-4 w-100">
-                    <div className="col aligncenter">
+                <div className="row row-lower my-4 w-100">
+                    <div className=" col-10 col-md-3 event-card-col aligncenter">
                         <div class="card eventcard">
                             <BsFillMicFill size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
@@ -29,7 +29,7 @@ const Latestevents = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col aligncenter">
+                    <div className="col-10 col-md-3 event-card-col aligncenter">
                         <div class="card eventcard">
                             <FcPositiveDynamic size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
@@ -39,7 +39,7 @@ const Latestevents = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col aligncenter">
+                    <div className="col-10 col-md-3 event-card-col aligncenter">
                         <div class="card eventcard">
                             <FcBiohazard size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">
@@ -49,7 +49,7 @@ const Latestevents = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col aligncenter">
+                    <div className="col-10 col-md-3 event-card-col aligncenter">
                         <div class="card eventcard">
                             <FcAutomotive size="60px" color='purple' />
                             <div class="card-body latest-event-card-body">

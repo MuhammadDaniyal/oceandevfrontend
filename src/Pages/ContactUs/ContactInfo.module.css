@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--color-primary);
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  margin: 0 auto;
+  /* margin-top: 10rem; */
+  color: white;
+}
+.container > h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.container > p {
+  color: var(--color-secondary);
+}
+.contactInfo {
+  margin-top: 4rem;
+}
+.contactInfoItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+.contactInfoItem > p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+.contactInfoItem > svg {
+  font-size: 1.4rem;
+  color: var(--color-btn-secondary);
+}
+.socialDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 7rem;
+}
+.socialDiv > svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.socialDiv > svg:hover {
+  color: var(--color-btn-secondary);
+}
