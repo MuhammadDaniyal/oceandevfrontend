@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--color-primary);
+  background-color: #0b031b;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   padding: 3rem;
@@ -8,15 +8,17 @@
   color: white;
 }
 .container > h1 {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #f50136;
 }
 .container > p {
+  font-size: 1.4rem;
   color: var(--color-secondary);
 }
 .contactInfo {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .contactInfoItem {
   display: flex;
@@ -35,11 +37,12 @@
 .btnDiv {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
   gap: 1rem;
 }
 .btnDiv > button {
   background-color: var(--color-btn-secondary);
+  font-size: 1.25rem;
 
   /* Transition properties */
   transition-property: transform, box-shadow;
@@ -69,10 +72,10 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 .socialDiv > svg {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   cursor: pointer;
 }
 .socialDiv > svg:hover {
