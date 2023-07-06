@@ -1,9 +1,7 @@
 import classes from "./ContactForm.module.css";
 import useInput from "../../utils/Hooks/useInput";
 import useLoader from "../../utils/Hooks/useLoader";
-// import TextField from "@mui/material/TextField";
 import { Grid, TextField, Button } from "@mui/material";
-// import Button from "@mui/material/Button";
 
 const ContactForm = () => {
   const { loader, handleLoader, LoadingComponent } = useLoader();
@@ -121,7 +119,7 @@ const ContactForm = () => {
               helperText={
                 firstNameIsError
                   ? "Incorrect First Name."
-                  : "atleast 5 characters"
+                  : "should not be empty"
               }
               fullWidth
             />
