@@ -37,12 +37,12 @@ const Sponser = () => {
 
                     <div className="slide"><img src="./images/spons.png" alt="logo" /></div>
                     <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b2.png" alt="logo" /></div>
-                    <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b3.png" /></div>
+                    <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b3.png" alt="logo" /></div>
                     <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b4.png" alt="logo" /></div>
 
                     <div className="slide"><img src="./images/spons.png" alt="logo" /></div>
                     <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b2.png" alt="logo" /></div>
-                    <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b3.png" /></div>
+                    <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b3.png" alt="logo" /></div>
                     <div className="slide"><img src="https://preview.colorlib.com/theme/evento/assets/img/brands/b4.png" alt="logo" /></div>
 
 

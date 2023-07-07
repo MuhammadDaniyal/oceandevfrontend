@@ -3,12 +3,14 @@
   height: 100px;
   background-color: #f50136;
   border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .aligncenter {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .customboxshadow {
@@ -23,6 +25,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.countdown-p {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 .myheading {
   border-left: 6px solid rgb(211, 40, 40);
